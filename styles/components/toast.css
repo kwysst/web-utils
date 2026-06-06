@@ -1,0 +1,68 @@
+/* Toast компонент - стили */
+.my-toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: var(--z-toast, 1000);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 350px;
+}
+
+.my-toast {
+    padding: 12px 16px;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: white;
+    /* базовый цвет текста */
+}
+
+/* Для warning текст должен быть тёмным */
+.my-toast-warning {
+    color: var(--color-dark);
+}
+
+.my-toast-show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.my-toast-hide {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.my-toast-message {
+    flex: 1;
+    font-size: 0.875rem;
+}
+
+.my-toast-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    transition: all 0.2s;
+}
+
+.my-toast-close:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}

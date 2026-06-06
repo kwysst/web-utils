@@ -1,0 +1,110 @@
+/* Цветовые утилиты (используют CSS-переменные) */
+
+/* Фоны */
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-success {
+    background-color: var(--color-success);
+}
+
+.bg-error {
+    background-color: var(--color-error);
+}
+
+.bg-warning {
+    background-color: var(--color-warning);
+}
+
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.bg-light {
+    background-color: var(--color-light);
+}
+
+/* Цвет текста */
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+.text-error {
+    color: var(--color-error);
+}
+
+.text-warning {
+    color: var(--color-warning);
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+/* Цвет границы */
+.border-primary {
+    border-color: var(--color-primary);
+}
+
+.border-success {
+    border-color: var(--color-success);
+}
+
+.border-error {
+    border-color: var(--color-error);
+}
+
+.border-warning {
+    border-color: var(--color-warning);
+}
+
+.border-dark {
+    border-color: var(--color-dark);
+}
+
+.border-light {
+    border-color: var(--color-light);
+}
+
+/* Hover-состояния для фона (опционально, но удобно) */
+.hover\:bg-primary:hover {
+    background-color: var(--color-primary);
+}
+
+.hover\:bg-success:hover {
+    background-color: var(--color-success);
+}
+
+.hover\:bg-error:hover {
+    background-color: var(--color-error);
+}
+
+.hover\:bg-warning:hover {
+    background-color: var(--color-warning);
+}
+
+/* Hover для текста */
+.hover\:text-primary:hover {
+    color: var(--color-primary);
+}
+
+.hover\:text-success:hover {
+    color: var(--color-success);
+}
+
+.hover\:text-error:hover {
+    color: var(--color-error);
+}
+
+.hover\:text-warning:hover {
+    color: var(--color-warning);
+}
