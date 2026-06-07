@@ -10,6 +10,3 @@
 @import 'typography.css';
 @import 'layout.css';
 @import 'borders.css';
-
-/* Компоненты */
-@import 'components/toast.css';

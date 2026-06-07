@@ -8,9 +8,9 @@
     flex-direction: column;
     gap: 12px;
     max-width: 350px;
-}
-
-.my-toast {
+  }
+  
+  .my-toast {
     padding: 12px 16px;
     border-radius: var(--radius-2);
     box-shadow: var(--shadow-lg);
@@ -23,33 +23,31 @@
     transition: all 0.3s ease;
     cursor: pointer;
     color: white;
-    /* базовый цвет текста */
-}
-
-/* Для warning текст должен быть тёмным */
-.my-toast-warning {
+  }
+  
+  .my-toast-warning {
     color: var(--color-dark);
-}
-
-.my-toast-show {
+  }
+  
+  .my-toast-show {
     transform: translateX(0);
     opacity: 1;
-}
-
-.my-toast-hide {
+  }
+  
+  .my-toast-hide {
     transform: translateX(100%);
     opacity: 0;
-}
-
-.my-toast-message {
+  }
+  
+  .my-toast-message {
     flex: 1;
     font-size: 0.875rem;
-}
-
-.my-toast-close {
+  }
+  
+  .my-toast-close {
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255,255,255,0.7);
     font-size: 20px;
     cursor: pointer;
     padding: 0;
@@ -60,9 +58,9 @@
     justify-content: center;
     border-radius: var(--radius-full);
     transition: all 0.2s;
-}
-
-.my-toast-close:hover {
+  }
+  
+  .my-toast-close:hover {
     color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
+    background: rgba(255,255,255,0.1);
+  }
