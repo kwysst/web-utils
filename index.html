@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+    <link rel="icon" href="src/index.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/utils-styles/index.css">
+</head>
+<body>
+    <script type="module">
+        import { toast } from '/utils-scripts/components/Toast/Toast.js';;
+        toast.message('123', 900000);
+        toast.success('123', 900000); 
+        toast.warning('123', 900000); 
+        toast.error('123', 900000); 
+    </script>
+</body>
+</html>

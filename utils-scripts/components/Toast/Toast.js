@@ -1,14 +1,11 @@
-// Импорт core-утилит (относительный путь)
 import { createElement, getOrCreateContainer } from '../../core/dom.js';
 
-// Автоматическая подгрузка CSS
 function injectStyles() {
     if (document.querySelector('#toast-styles')) return;
 
     const link = document.createElement('link');
     link.id = 'toast-styles';
     link.rel = 'stylesheet';
-    // CSS лежит рядом с JS
     link.href = new URL('./Toast.css', import.meta.url).href;
     document.head.appendChild(link);
 }
@@ -29,12 +26,9 @@ class ToastManager {
         if (!this.container) this.init();
 
         const toast = createElement('div', ['my-toast']);
-        const bgClass = type === 'default' ? 'bg-dark' : `bg-${type}`;
-        toast.classList.add(bgClass);
 
-        if (type === 'warning') {
-            toast.classList.add('my-toast-warning');
-        }
+        // Добавляем класс типа (default/success/error/warning)
+        toast.classList.add(`my-toast-${type}`);
 
         const textSpan = createElement('span', ['my-toast-message'], {});
         textSpan.textContent = message;
@@ -70,6 +64,10 @@ class ToastManager {
         }, 300);
     }
 
+    message(message, duration) {
+        return this.show(message, 'default', duration);
+    }
+
     success(message, duration) {
         return this.show(message, 'success', duration);
     }
@@ -83,5 +81,4 @@ class ToastManager {
     }
 }
 
-// Создаём и экспортируем singleton
 export const toast = new ToastManager();

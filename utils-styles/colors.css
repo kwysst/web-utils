@@ -1,110 +1,172 @@
+:root {
+    /* Основные цвета */
+    --color-primary: #3b82f6;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
+    --color-dark: #1f2937;
+    --color-light: #f9fafb;
+    
+    /* Дополнительные цвета для текста и фонов */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+
+    /* Прозрачности */
+    --opacity-disabled: 0.5;
+    --opacity-hover-light: 0.1;
+    --opacity-hover-dark: 0.2;
+    --opacity-focus: 0.25;
+
+    /* Тени */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+}
+
+
+/* ======================================== */
 /* Цветовые утилиты (используют CSS-переменные) */
+/* ======================================== */
 
-/* Фоны */
-.bg-primary {
-    background-color: var(--color-primary);
+/* ---------- Backgrounds ---------- */
+.bg-primary { background-color: var(--color-primary); }
+.bg-success { background-color: var(--color-success); }
+.bg-error { background-color: var(--color-error); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-dark { background-color: var(--color-dark); }
+.bg-light { background-color: var(--color-light); }
+.bg-white { background-color: var(--color-white); }
+.bg-black { background-color: var(--color-black); }
+
+/* Grays */
+.bg-gray-50 { background-color: var(--color-gray-50); }
+.bg-gray-100 { background-color: var(--color-gray-100); }
+.bg-gray-200 { background-color: var(--color-gray-200); }
+.bg-gray-300 { background-color: var(--color-gray-300); }
+.bg-gray-400 { background-color: var(--color-gray-400); }
+.bg-gray-500 { background-color: var(--color-gray-500); }
+.bg-gray-600 { background-color: var(--color-gray-600); }
+.bg-gray-700 { background-color: var(--color-gray-700); }
+.bg-gray-800 { background-color: var(--color-gray-800); }
+.bg-gray-900 { background-color: var(--color-gray-900); }
+
+/* Transparent */
+.bg-transparent { background-color: transparent; }
+.bg-current { background-color: currentColor; }
+
+/* ---------- Text colors ---------- */
+.text-primary { color: var(--color-primary); }
+.text-success { color: var(--color-success); }
+.text-error { color: var(--color-error); }
+.text-warning { color: var(--color-warning); }
+.text-dark { color: var(--color-dark); }
+.text-light { color: var(--color-light); }
+.text-white { color: var(--color-white); }
+.text-black { color: var(--color-black); }
+
+/* Grays */
+.text-gray-50 { color: var(--color-gray-50); }
+.text-gray-100 { color: var(--color-gray-100); }
+.text-gray-200 { color: var(--color-gray-200); }
+.text-gray-300 { color: var(--color-gray-300); }
+.text-gray-400 { color: var(--color-gray-400); }
+.text-gray-500 { color: var(--color-gray-500); }
+.text-gray-600 { color: var(--color-gray-600); }
+.text-gray-700 { color: var(--color-gray-700); }
+.text-gray-800 { color: var(--color-gray-800); }
+.text-gray-900 { color: var(--color-gray-900); }
+
+/* Text utilities */
+.text-inherit { color: inherit; }
+.text-current { color: currentColor; }
+.text-transparent { color: transparent; }
+
+/* ---------- Border colors ---------- */
+.border-primary { border-color: var(--color-primary); }
+.border-success { border-color: var(--color-success); }
+.border-error { border-color: var(--color-error); }
+.border-warning { border-color: var(--color-warning); }
+.border-dark { border-color: var(--color-dark); }
+.border-light { border-color: var(--color-light); }
+.border-white { border-color: var(--color-white); }
+.border-black { border-color: var(--color-black); }
+
+/* Grays */
+.border-gray-50 { border-color: var(--color-gray-50); }
+.border-gray-100 { border-color: var(--color-gray-100); }
+.border-gray-200 { border-color: var(--color-gray-200); }
+.border-gray-300 { border-color: var(--color-gray-300); }
+.border-gray-400 { border-color: var(--color-gray-400); }
+.border-gray-500 { border-color: var(--color-gray-500); }
+.border-gray-600 { border-color: var(--color-gray-600); }
+.border-gray-700 { border-color: var(--color-gray-700); }
+.border-gray-800 { border-color: var(--color-gray-800); }
+.border-gray-900 { border-color: var(--color-gray-900); }
+
+/* Border utilities */
+.border-transparent { border-color: transparent; }
+.border-current { border-color: currentColor; }
+
+/* ---------- Hover states ---------- */
+
+/* Hover backgrounds */
+.hover\:bg-primary:hover { background-color: var(--color-primary); }
+.hover\:bg-success:hover { background-color: var(--color-success); }
+.hover\:bg-error:hover { background-color: var(--color-error); }
+.hover\:bg-warning:hover { background-color: var(--color-warning); }
+.hover\:bg-dark:hover { background-color: var(--color-dark); }
+.hover\:bg-light:hover { background-color: var(--color-light); }
+
+/* Hover text colors */
+.hover\:text-primary:hover { color: var(--color-primary); }
+.hover\:text-success:hover { color: var(--color-success); }
+.hover\:text-error:hover { color: var(--color-error); }
+.hover\:text-warning:hover { color: var(--color-warning); }
+.hover\:text-dark:hover { color: var(--color-dark); }
+.hover\:text-light:hover { color: var(--color-light); }
+
+/* Hover border colors */
+.hover\:border-primary:hover { border-color: var(--color-primary); }
+.hover\:border-success:hover { border-color: var(--color-success); }
+.hover\:border-error:hover { border-color: var(--color-error); }
+.hover\:border-warning:hover { border-color: var(--color-warning); }
+
+/* ---------- Focus states ---------- */
+.focus\:ring-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-primary, #3b82f6);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+.focus\:ring-success:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-success) 25%, transparent);
+}
+.focus\:ring-error:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-error) 25%, transparent);
+}
+.focus\:ring-warning:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-warning) 25%, transparent);
 }
 
-.bg-success {
-    background-color: var(--color-success);
-}
+/* ---------- Opacity utilities ---------- */
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: 0.25; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
 
-.bg-error {
-    background-color: var(--color-error);
-}
-
-.bg-warning {
-    background-color: var(--color-warning);
-}
-
-.bg-dark {
-    background-color: var(--color-dark);
-}
-
-.bg-light {
-    background-color: var(--color-light);
-}
-
-/* Цвет текста */
-.text-primary {
-    color: var(--color-primary);
-}
-
-.text-success {
-    color: var(--color-success);
-}
-
-.text-error {
-    color: var(--color-error);
-}
-
-.text-warning {
-    color: var(--color-warning);
-}
-
-.text-dark {
-    color: var(--color-dark);
-}
-
-.text-light {
-    color: var(--color-light);
-}
-
-/* Цвет границы */
-.border-primary {
-    border-color: var(--color-primary);
-}
-
-.border-success {
-    border-color: var(--color-success);
-}
-
-.border-error {
-    border-color: var(--color-error);
-}
-
-.border-warning {
-    border-color: var(--color-warning);
-}
-
-.border-dark {
-    border-color: var(--color-dark);
-}
-
-.border-light {
-    border-color: var(--color-light);
-}
-
-/* Hover-состояния для фона (опционально, но удобно) */
-.hover\:bg-primary:hover {
-    background-color: var(--color-primary);
-}
-
-.hover\:bg-success:hover {
-    background-color: var(--color-success);
-}
-
-.hover\:bg-error:hover {
-    background-color: var(--color-error);
-}
-
-.hover\:bg-warning:hover {
-    background-color: var(--color-warning);
-}
-
-/* Hover для текста */
-.hover\:text-primary:hover {
-    color: var(--color-primary);
-}
-
-.hover\:text-success:hover {
-    color: var(--color-success);
-}
-
-.hover\:text-error:hover {
-    color: var(--color-error);
-}
-
-.hover\:text-warning:hover {
-    color: var(--color-warning);
-}
+.hover\:opacity-75:hover { opacity: 0.75; }
+.hover\:opacity-100:hover { opacity: 1; }
