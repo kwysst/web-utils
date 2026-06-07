@@ -63,11 +63,11 @@
 /* Default */
 .my-toast-default {
     background-color: var(--color-dark);
-    color: var(--color-white);
+    color: var(--color-light);
 }
 
 .my-toast-default .my-toast-close {
-    color: var(--color-white);
+    color: var(--color-light);
     opacity: var(--opacity-light, 0.7);
 }
 
@@ -79,11 +79,11 @@
 /* Success */
 .my-toast-success {
     background-color: var(--color-success);
-    color: var(--color-dark);
+    color: var(--color-light);
 }
 
 .my-toast-success .my-toast-close {
-    color: var(--color-dark);
+    color: var(--color-light);
     opacity: var(--opacity-light, 0.7);
 }
 
